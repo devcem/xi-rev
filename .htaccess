@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteEngine On 
+	RewriteCond %{REQUEST_FILENAME} !-f 
+	RewriteCond %{REQUEST_FILENAME} !-d 
+
+	RewriteRule ^(.*?)?(.*?)$ index.php?page=$2&$3 [QSA,NC,L]
+
+</IfModule>
